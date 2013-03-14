@@ -191,6 +191,12 @@ end tell
 EOF
 }
 
+# Strip whitespace from all files recursively
+# Requires your current working directory to be a git repository
+function white() {
+	git grep -I --name-only -z -e '' | xargs -0 sed -i '' -E "s/[[:space:]]*$//"
+}
+
 # Manually remove a downloaded app or file from the quarantine
 function unquarantine() {
 	for attribute in com.apple.metadata:kMDItemDownloadedDate com.apple.metadata:kMDItemWhereFroms com.apple.quarantine; do
