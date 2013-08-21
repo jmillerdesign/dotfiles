@@ -23,6 +23,14 @@
 	credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
+	# Assume a file as unchanged
+	assume = update-index --assume-unchanged
+	# Stop assuming a file as unchanged
+	unassume = update-index --no-assume-unchanged
+	# List assumed files
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+	# Take a snapshot of your current working tree without removing the changes from your tree
+	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 
 [apply]
 	# Detect whitespace errors when applying a patch
