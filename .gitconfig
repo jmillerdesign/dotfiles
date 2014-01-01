@@ -31,6 +31,16 @@
 	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
 	# Take a snapshot of your current working tree without removing the changes from your tree
 	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+	# Find branches containing commit
+	fb = "!f() { git branch -a --contains $1; }; f"
+	# Find tags containing commit
+	ft = "!f() { git describe --always --contains $1; }; f"
+	# Find commits by source code
+	fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+	# Find commits by commit message
+	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+	# Remove branches that have already been merged with master
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 [apply]
 	# Detect whitespace errors when applying a patch
@@ -46,6 +56,9 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of
 	# a line
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
+	# Make `git rebase` safer on OS X
+	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+	trustctime = false
 
 [color]
 	# Use colors in Git commands that are capable of colored output when
