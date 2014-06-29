@@ -133,6 +133,15 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 
+# Alias to delete all the stupid shit you did last night.
+# Gets you back to a clean repository.
+# Here’s how it works:
+#   -d : Removes untracked directories
+#   -x : Ignore rules in the .gitignore file
+#   -f : Force it to happen
+#   reset –hard : Discard any tracked files in the repository
+alias git-fuckit="git clean -d -x -f; git reset --hard"
+
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
