@@ -140,7 +140,8 @@ alias pumpitup="osascript -e 'set volume 7'"
 #   -x : Ignore rules in the .gitignore file
 #   -f : Force it to happen
 #   reset –hard : Discard any tracked files in the repository
-alias git-fuckit="git clean -d -x -f; git reset --hard"
+alias git-fuckit="git clean -d -f; git reset --hard"
+alias git-fuckeverything="git clean -d -x -f; git reset --hard"
 
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
