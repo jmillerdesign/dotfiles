@@ -1,12 +1,17 @@
 {
-	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"bold_folder_labels": true,
-	"default_line_ending": "unix",
-	"show_line_endings": true,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/Predawn/predawn.tmTheme",
+	"copy_with_empty_selection": false,
 	"default_encoding": "UTF-8",
-	"show_encoding": true,
+	"default_line_ending": "unix",
 	"detect_indentation": false,
+	"drag_text": false,
+	"draw_minimap_border": true,
 	"draw_white_space": "all",
+	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -23,18 +28,41 @@
 		".git",
 		"node_modules"
 	],
-	"font_size": 12,
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"no_round"
+	],
+	"font_size": 14,
+	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"line_padding_bottom": 6,
 	"match_brackets": true,
 	"match_brackets_angle": true,
+	"match_brackets_content": false,
+	"match_selection": false,
+	"match_tags": false,
+	"open_files_in_new_window": false,
+	"overlay_scroll_bars": "enabled",
+	"preview_on_click": false,
 	"remember_open_files": false,
 	"rulers":
 	[
 		80
 	],
+	"scroll_past_end": true,
+	"scroll_speed": 5.0,
+	"show_encoding": true,
+	"show_full_path": false,
+	"show_line_endings": true,
+	"sidebar_default": true,
 	"tab_size": 4,
+	"theme": "predawn.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
