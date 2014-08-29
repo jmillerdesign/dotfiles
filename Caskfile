@@ -4,7 +4,7 @@
 install caskroom/cask/brew-cask
 tap caskroom/versions
 
-cask install alfred 2> /dev/null
+cask install appcleaner 2> /dev/null
 cask install bettertouchtool 2> /dev/null
 cask install boom 2> /dev/null
 cask install boot2docker 2> /dev/null
@@ -27,7 +27,8 @@ cask install mou 2> /dev/null
 # cask install opera-next 2> /dev/null
 cask install skype 2> /dev/null
 cask install spotify 2> /dev/null
-cask install sublime-text 2> /dev/null
+cask install sublime-text3 2> /dev/null
+cask install textwrangler 2> /dev/null
 cask install the-unarchiver 2> /dev/null
 # cask install torbrowser 2> /dev/null
 cask install tower 2> /dev/null

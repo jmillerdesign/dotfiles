@@ -37,6 +37,7 @@ install homebrew/php/php55 --with-gmp
 
 # Install other useful binaries
 install ack
+install awscli
 install bfg
 #install exiv2
 # install foremost
@@ -58,7 +59,6 @@ install mongodb
 install mysql
 install nginx
 install nmap
-install node
 install node # This installs `npm` too using the recommended installation method
 install openssl
 install p7zip
@@ -77,6 +77,8 @@ install tree
 # install ucspi-tcp # `tcpserver` et al.
 install unixodbc
 install webkit2png
+install wget
+install wp-cli
 install xpdf
 install z
 install zlib
