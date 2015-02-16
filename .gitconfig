@@ -53,6 +53,9 @@
 	# Take a snapshot of your current working tree without removing the changes from your tree
 	snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 
+	# Remove the old tag with this name and tag the latest commit with it.
+	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
 	# Find branches containing commit
 	fb = "!f() { git branch -a --contains $1; }; f"
 
@@ -103,6 +106,10 @@
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+
+	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
+	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+	precomposeunicode = false
 
 [color]
 
