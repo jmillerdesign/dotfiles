@@ -54,6 +54,7 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
+brew install aircrack-ng
 brew install bfg
 brew install binutils
 brew install binwalk
@@ -81,6 +82,7 @@ brew install xz
 brew install ack
 #brew install exiv2
 brew install git
+brew install git-lfs
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
@@ -90,6 +92,7 @@ brew install pv
 brew install rename
 brew install rhino
 brew install speedtest_cli
+brew install ssh-copy-id
 brew install tree
 brew install webkit2png
 brew install zopfli
@@ -110,13 +113,6 @@ brew install redis
 brew install wp-cli
 brew install wpcli-completion
 brew install z
-
-# Install Node.js. Note: this installs `npm` too, using the recommended
-# installation method.
-brew install node
-
-# Install io.js
-brew install iojs
 
 # Remove outdated versions from the cellar.
 brew cleanup
