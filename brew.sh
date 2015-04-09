@@ -105,7 +105,7 @@ brew install brew-cask
 brew install casperjs
 brew install composer
 brew install docker
-brew install fig
+brew install docker-compose
 brew install git-flow
 brew install phantomjs
 brew install phpmyadmin
