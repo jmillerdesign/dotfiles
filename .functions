@@ -94,6 +94,11 @@ function gitio() {
 	curl -i http://git.io/ -F "url=${2}" -F "code=${1}";
 }
 
+# Create .gitignore file using gitignore.io
+function gi() {
+	curl -L -s https://www.gitignore.io/api/$@ ;
+}
+
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8000}";
