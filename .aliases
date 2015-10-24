@@ -1,3 +1,12 @@
+# Docker
+alias dl='docker ps -l -q' # Get the last docker id
+alias dstop='docker stop $(docker ps -q)' # Stop all docker containers
+alias drm='docker rm $(docker ps -a -q)' # Delete all stopped containers
+alias drmf='docker rm -f $(docker ps -a -q)' # Delete all containers
+alias drmi='docker rmi $(docker images -q)' # Delete all docker images
+alias drmin='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' # Delete all untagged docker images
+alias dup='dstop; docker-compose up -d' # Compose up
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
