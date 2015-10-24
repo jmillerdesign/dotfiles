@@ -7,6 +7,10 @@ alias drmi='docker rmi $(docker images -q)' # Delete all docker images
 alias drmin='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' # Delete all untagged docker images
 alias dup='dstop; docker-compose up -d' # Compose up
 
+# Apache
+alias hosts="subl /etc/hosts /etc/apache2/extra/httpd-vhosts.conf"
+alias graceful="sudo apachectl graceful"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
