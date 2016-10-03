@@ -152,7 +152,7 @@ command -v grunt > /dev/null && alias grunt="grunt --stack"
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
+alias pumpitup="osascript -e 'set volume output volume 100'"
 
 # Alias to delete all the stupid shit you did last night.
 # Gets you back to a clean repository.
