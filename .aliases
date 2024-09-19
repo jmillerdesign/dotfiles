@@ -10,8 +10,8 @@ alias drmin='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' # 
 alias dup='dstop; docker-compose up -d' # Compose up
 
 # Apache
-alias hosts="code /etc/hosts /etc/apache2/extra/httpd-vhosts.conf"
-alias graceful="sudo apachectl graceful"
+alias hosts="code /etc/hosts /usr/local/etc/httpd/extra/httpd-vhosts.conf"
+alias graceful="sudo brew services restart httpd" # sudo apachectl graceful
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -27,6 +27,9 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/Dev"
 alias g="git"
+alias h="history"
+alias j="jobs"
+alias t="gittower ."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -61,6 +64,9 @@ alias sudo='sudo '
 # Get week number
 alias week='date +%V'
 
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
 
@@ -69,7 +75,7 @@ alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ip="curl https://api.ipify.org"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
@@ -172,3 +178,6 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Get the IP of an EC2 instance
+alias _sharespring-server-ip="AWS_PROFILE=sharespring aws ec2 describe-instances --filters 'Name=instance-state-name,Values=running' 'Name=tag:Name,Values=Production Web/API' --query 'Reservations[*].Instances[*].[PublicIpAddress]' --output text"
