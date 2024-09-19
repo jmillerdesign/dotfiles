@@ -1,10 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
-# http://golang.org/doc/code.html#GOPATH
-export GOPATH=$HOME/.go;
-export PATH=$PATH:$GOPATH/bin;
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -56,4 +52,4 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"

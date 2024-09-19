@@ -98,20 +98,7 @@ brew install vbindiff
 brew install zopfli
 
 # J. Miller's binaries
-brew install android-sdk
-brew install awscli
-brew install boot2docker
-brew install brew-cask
-brew install casperjs
-brew install composer
-brew install docker
-brew install docker-compose
-brew install git-flow
-brew install phantomjs
-brew install phpmyadmin
-brew install redis
 brew install wp-cli
-brew install wpcli-completion
 brew install z
 
 # Remove outdated versions from the cellar.

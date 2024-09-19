@@ -10,7 +10,7 @@ alias drmin='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")' # 
 alias dup='dstop; docker-compose up -d' # Compose up
 
 # Apache
-alias hosts="subl /etc/hosts /etc/apache2/extra/httpd-vhosts.conf"
+alias hosts="code /etc/hosts /etc/apache2/extra/httpd-vhosts.conf"
 alias graceful="sudo apachectl graceful"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
@@ -22,12 +22,11 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Dev/Dropbox"
+alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Dev"
 alias g="git"
-alias e=s
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

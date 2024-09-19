@@ -152,15 +152,15 @@ function white() {
 	git grep -I --name-only -z -e '' | xargs -0 sed -i '' -E "s/[[:space:]]*$//"
 }
 
-# `s` with no arguments opens the .sublime-project file if it exists in the
-# current directory in Sublime Text, otherwise opens the given location
-function s() {
+# `e` with no arguments opens the .code-workspace file if it exists in the
+# current directory in VS Code, otherwise opens the given location
+function e() {
 	if [ $# -ne 0 ]; then
-		subl "$@";
-	elif [ -f *.sublime-project ]; then
-		subl *.sublime-project;
+		code "$@";
+	elif [ -f *.code-workspace ]; then
+		code *.code-workspace;
 	else
-		subl .;
+		code .;
 	fi;
 }
 
