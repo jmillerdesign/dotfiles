@@ -98,6 +98,8 @@ brew install vbindiff
 brew install zopfli
 
 # J. Miller's binaries
+brew install volta
+brew install wget
 brew install wp-cli
 brew install z
 
