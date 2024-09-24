@@ -178,6 +178,3 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
-# Get the IP of an EC2 instance
-alias _sharespring-server-ip="AWS_PROFILE=sharespring aws ec2 describe-instances --filters 'Name=instance-state-name,Values=running' 'Name=tag:Name,Values=Production Web/API' --query 'Reservations[*].Instances[*].[PublicIpAddress]' --output text"
